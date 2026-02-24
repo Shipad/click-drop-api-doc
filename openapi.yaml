@@ -1,12 +1,8 @@
-openapi: 3.0.0
-info:
-  title: Test API
-  version: 1.0.0
-
-paths:
-  /hello:
-    get:
-      summary: Hello endpoint
-      responses:
-        "200":
-          description: OK
+tags:
+  - name: Base URL
+  - name: Rate Limits
+  - name: Version
+  - name: Orders
+  - name: Labels
+  - name: Manifests
+  - name: Returns
