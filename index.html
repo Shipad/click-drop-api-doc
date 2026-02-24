@@ -1,19 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>API Docs</title>
-  <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist/swagger-ui.css" />
-</head>
-<body>
-  <div id="swagger-ui"></div>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Click & Drop API</title>
 
-  <script src="https://unpkg.com/swagger-ui-dist/swagger-ui-bundle.js"></script>
-  <script>
-    SwaggerUIBundle({
-      url: "openapi.yaml",
-      dom_id: "#swagger-ui",
-    });
-  </script>
-</body>
+    <script src="https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js"></script>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Header bar giống RM */
+      .topbar {
+        background: #1e2f3f;
+        color: white;
+        padding: 14px 24px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="topbar">V1</div>
+
+    <redoc 
+      spec-url="openapi.yaml"
+      expand-responses="200"
+      hide-download-button="false"
+      theme='{
+        "colors": {
+          "primary": {
+            "main": "#1e2f3f"
+          }
+        },
+        "sidebar": {
+          "backgroundColor": "#f3f3f3",
+          "textColor": "#333"
+        },
+        "rightPanel": {
+          "backgroundColor": "#1e2f3f"
+        },
+        "typography": {
+          "fontFamily": "Inter, Arial, sans-serif"
+        }
+      }'>
+    </redoc>
+  </body>
 </html>
